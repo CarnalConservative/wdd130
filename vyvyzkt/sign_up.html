@@ -3,7 +3,7 @@
 <head>
     <style>
         form {
-  /* Center the form on the page */
+  text-align: left;
   margin: 0 auto;
   width: 400px;
   /* Form outline */
@@ -12,31 +12,18 @@
   border-radius: 1em;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.hidden1.button {
+  text-align: center;
 }
 
-form li + li {
-  margin-top: 1em;
-}
 
-label {
-  /* Uniform size & alignment */
-  display: inline-block;
-  width: 90px;
-  text-align: right;
-}
-
-input,
-textarea {
+input, textarea {
   /* To make sure that all text fields have the same font settings
      By default, textareas have a monospace font */
   font: 1em sans-serif;
 
   /* Uniform text field size */
-  width: 300px;
+  width: auto;
   box-sizing: border-box;
 
   /* Match form field borders */
@@ -49,23 +36,17 @@ textarea:focus {
   border-color: #000;
 }
 
-textarea {
-  /* Align multiline text fields with their labels */
-  vertical-align: top;
 
-  /* Provide space to type some text */
-  height: 5em;
-}
 
 .button {
   /* Align buttons with the text fields */
-  padding-left: 90px; /* same size as the label elements */
+  padding-left: auto; /* same size as the label elements */
 }
 
 button {
   /* This extra margin represent roughly the same space as the space
      between the labels and their text fields */
-  margin-left: .5em;
+  margin-left: right;
 }
 
     </style>
@@ -98,6 +79,8 @@ button {
             <h1 class="home-title">Join Us!</h1>
             <div id="feedback"></div>
             <form action="/my-handling-form-page" method="post">
+
+      </div>
                 Pick Your Plan:<br>
     <select name="" ; onchange="showDiv(this)";>
         <option value="" >-select-</option>
@@ -109,42 +92,27 @@ button {
     <div id="hiddenNo" style="display:block;">
     </div>
     <br>
-    <div id="hidden0" style="display:inline-flexbox">
-    How Would You Like To Pay For This Service?:<br><br>
-        <input type="radio" id="none" name="pay" value="" onchange="showDiva0(this)";>
-        <label for="check">None</label>
-        <input type="radio" id="credit_card" name="pay" value="check" onchange="showDiva0(this)";>
-        <label for="check">Check</label><br>
+    <div id="hidden0" style="display:block">
+    How Would You Like To Pay For This Service?:<br>
         <input type="radio" id="credit_card" name="pay" value="credit_card" onchange="showDiva0(this)";>
         <label for="credit_card">Credit Card</label><br>
         <input type="radio" id="crypto" name="pay" value="crypto" onchange="showDiva0(this)";>
         <label for="crypto">Crypto</label><br>
     </div>
     <div id="hidden1" style="display:block;" >
-    Please Enter Check Details:<br>
-        <label for="first_name">First Name: </label>
-        <input id="first_name" name="first_name" required ><br>
-        <!--Last Name. Give this input the name last_name.-->
-        <label for="last_name">Last Name: </label>
-        <input id="last_name" name="last_name" required><br>
-        <!--Student ID. Give this input the name student_id.-->
-        <label for="address">Address: </label>
-        <input id="address" name="address" required><br>
-    </div>
-    <div id="hidden2" style="display:block;">
     Please Enter Credit Card Information:<br>
     <!--Instrument (valid instruments: piano, voice, string, organ, other). Give this input the name instrument. -->
-    <label for="cc">Credit Card #: </label>
+    <label for="cc">Credit Card #: </label><br>
         <input id="cc" name="cc" required pattern="[123456789][123456789][123456789][123456789] [123456789][123456789][123456789][123456789] [123456789][123456789][123456789][123456789] [123456789][123456789][123456789][123456789]">
-        <a style="font-size:xx-small";>Please enter using "XXXX XXXX XXXX XXXX" format</a><br>
-        <label for="exp_date">Credit Card Expiration Date: </label>
+        <a style="font-size:xx-small";><br>Please enter using "XXXX XXXX XXXX XXXX" format</a><br>
+        <label for="exp_date">Credit Card Expiration Date: </label><br>
         <input id="exp_date" name="exp_date" required pattern="[123456789][123456789]/20[123456789][123456789]">
-        <a style="font-size:xx-small";>Please enter using "mm/yyyy" format</a><br>
+        <a style="font-size:xx-small";><br>Please enter using "mm/yyyy" format</a><br>
     </div>
     <div id="hidden3" style="display:block;" >
     Please Enter Crypto Link:<br>
     <!--Location // On campus building where the room is located (Snow, Austin, etc.). Give this input the name location. -->
-    <label for="crypto_link">Link: </label>
+    <label for="crypto_link">Link: </label><br>
         <input id="crypto_link" name="crypto_link" required ><br>
     </div>
    
@@ -170,7 +138,7 @@ button {
             </a>
         </div>
     </footer>
-    </div>
+    
 </body>
 <script>
     // get the feedback div element so we can do something with it.

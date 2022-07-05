@@ -26,6 +26,10 @@
 
 /*  Look around below...but DON'T CHANGE ANYTHING! */
 
+.hidden0 {
+  text-align: left;
+}
+
 body {
   max-width: 960px;
   margin: 0 auto;
