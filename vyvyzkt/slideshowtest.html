@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #F4FF52;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="images/TheVyvyzktLogo.png" style="width:100%">
+  <div class="text">About Vyvyzkt<br>Reliable Social Media Sharing All in One Spot!<br>Vyvyzkt is the App that will allow you to share all of your posts from one convenient place!  One post, all Social Medias shared to in one click.  The perfect solution to the constantly changing terms of service and will be rooted in one of the safest “trigger services” imaginable on the internet, your Gab account.
+    Having a voice online is much harder today than it was ever before.  You not only have to watch what you say, but you have to say it in so many more places than before.  So rather than having to copy-paste to multiple accounts, you can just post in Vyvyzkt using your Gab account to auto-post to all of your social media profiles.
+    Another problem with social media sharing services, is your “trigger service”.  For example, lets say that in any other social media sharing service, your trigger service is your Twitter account.  This means that when you post to your Twitter account, it sends your post to whatever other services you have linked to your Twitter trigger service.  You might have automated social media sharing already, using another service that uses Twitter as your trigger service.  Good for you.  But lets say that something horrible happens on the internet, like it does at least once every week on the internet and Twitter once again has a change in the terms of service.  And this time, its your account on the chopping block…maybe this is the second time this has happened.  Maybe you have already been banned from twitter before.  In any case, your trigger service is now defunct.  Your posts will no longer be shared across the internet.
+    Vyvyzkt prevents you from ever having to deal with that problem by using the free speech platform of Gab.com as the trigger for all of your Social Media sharing.  This means that while your posts might get you banned on Twitter or Facebook, they will not be banned on Gab and because Gab will not infringe on your Free Speech, your trigger service is safe and your posts will still send to all of your profiles across the internet without any interruption.</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="images/TheVyvyzktLogo.png" style="width:100%">
+  <div class="text">About Vyvyzkt<br>Data-Sharing<br>Vyvyzkt is a business that provides a “free” service.  What this means is that YOU are the product.  In exchange for the “free” service of sharing to multiple profiles, Vyvyzkt imitates Googles “crawler” technology across the profiles of every Vyvyzkt user.  Vyvyzkt scans your profile for what the other Big Tech platforms are recommending you, and your friends!  This data is then collected and stored to be sold to…Gab.  Gab and other alt-tech companies to assist in forming a foundation for the parallel market place for the future of the internet.  And while your data will be collected, your data will not be sold to any party without your consent.  You will have the power to choose which among our many clients you want your data to be sold to.  While we suggest you click ALL the boxes, you will be required to click at least ONE of them.</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/TheVyvyzktLogo.png" style="width:100%">
+  <div class="text">About Vyvyzkt<br>Your Privacy<br>While Vyvyzkt does collect and sell your data to conscientious clients, your privacy is a top priority.  Every action sent to and from the Vyvyzkt App, is passed through a VPN encryption service.  Your location and even your ownership of your accounts internet-wide, is kept to you.  Vyvyzkt does not allow other sites to track your posts or usage through using Vyvyzkt.</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
