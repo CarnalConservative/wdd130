@@ -29,18 +29,21 @@
 .hidden0 {
   text-align: left;
 }
+body.img {
+  margin-bottom: 50px;
+}
 
 body {
-  max-width: 960px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 4em;
+  padding: auto;
   font-size: 18px;
   text-align: center;
 }
 img {
   display: block;
   margin: 0 auto;
-  max-width: 300px;
+  max-width: 1000px;
 }
 h1, h2, h3, h4, h5, h6 {
   margin-left: 50px;
@@ -242,7 +245,7 @@ footer a:hover {
     color: #000914;
     text-decoration: underline;
 }
-.icon #hero-img {
+#hero-img {
     width: 10%;
 }
 header {
@@ -280,13 +283,24 @@ nav {
     grid-row: 1/2;
     margin-top: 100px;
 }
+#slideimg1 {
+  width: auto;
+}
+#slideimg2 {
+  width: auto;
+  display: block;
+}
+#slideimg3 {
+  width: auto;
+}
 
 @media screen {
-    #hero, .home-grid {
+    #hero, .home-grid, .slideshow-container {
         display: block;
         height: auto;
         width: auto;
     }
+   
     nav, footer {
         flex-direction: row;
     }
@@ -301,7 +315,7 @@ nav {
         margin-top: 0;
     }
     #hero-msg h4 {
-        display: none;
+        display: block;
     }
     .home-title {
         font-size: 25px;
@@ -313,6 +327,6 @@ nav {
     }
     
     footer {
-        margin-top: 25px;
+        margin-top: 100px;
     }
 }
