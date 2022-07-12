@@ -26,11 +26,15 @@
 
 /*  Look around below...but DON'T CHANGE ANYTHING! */
 
+* {box-sizing: border-box}
+body {margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
 .hidden0 {
   text-align: left;
 }
-body.img {
-  margin-bottom: 50px;
+body.text{
+  margin-bottom: 100px;
 }
 
 body {
@@ -232,7 +236,7 @@ nav a:hover {
 footer {
     background-color: #6A041D;
     padding: 25px 50px;
-    margin-top: 200px; 
+    margin-top: 100px; 
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -250,7 +254,7 @@ footer a:hover {
 }
 header {
     display: grid;
-    grid-template-columns: 300px auto;
+    grid-template-columns: auto;
 }
 nav {
     display: flex;
@@ -285,6 +289,7 @@ nav {
 }
 #slideimg1 {
   width: auto;
+  display: block;
 }
 #slideimg2 {
   width: auto;
@@ -292,6 +297,7 @@ nav {
 }
 #slideimg3 {
   width: auto;
+  display: block;
 }
 
 @media screen {
